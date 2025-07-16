@@ -10,7 +10,7 @@ public class ComparingStream {
         Student b = new Student("B", "2", 3.0);
         Student c = new Student("C", "3", 3.6);
 
-        Optional<Student> op = Stream.of(a, b, c).min(Comparator.comparing(s -> s.getGpa()).reversed());
+        Optional<Student> op = Stream.of(a, b, c).min(Comparator.comparing(s -> s.getGpa()));
         System.out.println(op.get());
 
     }
